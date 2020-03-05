@@ -1,5 +1,6 @@
 package org.launchcode.codingevents.controllers;
 
+import org.launchcode.codingevents.data.EventCategoryRepository;
 import org.launchcode.codingevents.data.EventRepository;
 import org.launchcode.codingevents.models.Event;
 import org.launchcode.codingevents.models.EventType;
@@ -20,6 +21,9 @@ public class EventController {
 
     @Autowired
     private EventRepository eventRepository;
+
+    @Autowired
+    private EventCategoryRepository eventCategoryRepository;
 
     @GetMapping
     public String displayAllEvents(Model model) {
